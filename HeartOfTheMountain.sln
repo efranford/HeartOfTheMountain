@@ -5,6 +5,8 @@ Project("{8754A4DA-5132-52C8-4CF3-221E6C91D6AC}") = "HeartOfTheMountain", "Assem
 EndProject
 Project("{8754A4DA-5132-52C8-4CF3-221E6C91D6AC}") = "HeartOfTheMountain", "Assembly-CSharp.csproj", "{7B7F35A7-0755-CDDA-CD02-F9B169323E08}"
 EndProject
+Project("{8754A4DA-5132-52C8-4CF3-221E6C91D6AC}") = "HeartOfTheMountain", "Assembly-CSharp-Editor.csproj", "{995DFD68-9093-1FD0-0413-8DE7F7410C4A}"
+EndProject
 Project("{8754A4DA-5132-52C8-4CF3-221E6C91D6AC}") = "HeartOfTheMountain", "Assembly-UnityScript-firstpass.unityproj", "{0F98A697-AB28-4145-9912-BB4415A39492}"
 EndProject
 Project("{8754A4DA-5132-52C8-4CF3-221E6C91D6AC}") = "HeartOfTheMountain", "Assembly-UnityScript.unityproj", "{282B8927-962F-E4B6-344D-FC01EE41A6E5}"
@@ -23,6 +25,10 @@ Global
 		{7B7F35A7-0755-CDDA-CD02-F9B169323E08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B7F35A7-0755-CDDA-CD02-F9B169323E08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B7F35A7-0755-CDDA-CD02-F9B169323E08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{995DFD68-9093-1FD0-0413-8DE7F7410C4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{995DFD68-9093-1FD0-0413-8DE7F7410C4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{995DFD68-9093-1FD0-0413-8DE7F7410C4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{995DFD68-9093-1FD0-0413-8DE7F7410C4A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0F98A697-AB28-4145-9912-BB4415A39492}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0F98A697-AB28-4145-9912-BB4415A39492}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F98A697-AB28-4145-9912-BB4415A39492}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -35,7 +41,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-				GlobalSection(MonoDevelopProperties) = preSolution
+																									GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

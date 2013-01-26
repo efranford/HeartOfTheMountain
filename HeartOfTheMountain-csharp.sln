@@ -5,6 +5,8 @@ Project("{8754A4DA-5132-52C8-4CF3-221E6C91D6AC}") = "HeartOfTheMountain", "Assem
 EndProject
 Project("{8754A4DA-5132-52C8-4CF3-221E6C91D6AC}") = "HeartOfTheMountain", "Assembly-CSharp-vs.csproj", "{7B7F35A7-0755-CDDA-CD02-F9B169323E08}"
 EndProject
+Project("{8754A4DA-5132-52C8-4CF3-221E6C91D6AC}") = "HeartOfTheMountain", "Assembly-CSharp-Editor-vs.csproj", "{995DFD68-9093-1FD0-0413-8DE7F7410C4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,11 +21,15 @@ Global
 		{7B7F35A7-0755-CDDA-CD02-F9B169323E08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B7F35A7-0755-CDDA-CD02-F9B169323E08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B7F35A7-0755-CDDA-CD02-F9B169323E08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{995DFD68-9093-1FD0-0413-8DE7F7410C4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{995DFD68-9093-1FD0-0413-8DE7F7410C4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{995DFD68-9093-1FD0-0413-8DE7F7410C4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{995DFD68-9093-1FD0-0413-8DE7F7410C4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-					GlobalSection(MonoDevelopProperties) = preSolution
+																										GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
