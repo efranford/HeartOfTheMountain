@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Camera\ThirdPersonWalker.js">
+    <Files>
+      <File FileName="Assets\Scripts\Camera\ThirdPersonWalker.js" Line="72" Column="36" />
+      <File FileName="Assets\Scripts\Camera\ThirdPersonLook.cs" Line="180" Column="45" />
+      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonCamera.js" Line="5" Column="1" />
+      <File FileName="Assets\SmoothMouseLook.cs" Line="134" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
