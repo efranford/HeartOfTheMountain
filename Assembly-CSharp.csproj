@@ -44,7 +44,9 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\FootCollider.cs" />
      <Compile Include="Assets\HUD.cs" />
+     <Compile Include="Assets\Heartbeat.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\Other\ChatInput.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\Other\DownloadTexture.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\Other\DragDropContainer.cs" />

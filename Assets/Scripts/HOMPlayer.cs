@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System;
 
 public class HOMPlayer : MonoBehaviour {
 	
@@ -11,6 +13,10 @@ public class HOMPlayer : MonoBehaviour {
     public float gravity = 20.0F;
     private Vector3 moveDirection = Vector3.zero;
 	CharacterController controller;
+	
+	public AudioClip WalkSound;
+	public AudioClip RunSound;
+	public AudioClip PickedUpAcornSound;
 	
 	void Start()
 	{
@@ -56,12 +62,12 @@ public class HOMPlayer : MonoBehaviour {
 
     void OnTriggerEnter(Collider collision) 
 	{
-		Debug.Log("Player hit "+collision.gameObject.name);
 		WorthPoints points = collision.gameObject.GetComponent<WorthPoints>();
 		if(points != null)
 		{
 			animation.CrossFade("Grab");
 			AcornsCollected += points.PointsWorth;
+			AudioSource.PlayClipAtPoint(PickedUpAcornSound,transform.position,1.0f);
 			Destroy(collision.gameObject);
 		}
 	}

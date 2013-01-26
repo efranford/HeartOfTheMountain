@@ -1,14 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\HOMPlayer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\FootCollider.cs">
     <Files>
+      <File FileName="Assets\Scripts\WorthPoints.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\HOMPlayer.cs" Line="65" Column="44" />
       <File FileName="Assets\Scripts\Camera\ThirdPersonLook.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MyGameTime.cs" Line="58" Column="50" />
-      <File FileName="Assets\Scripts\LookAtTargetOld.cs" Line="8" Column="45" />
-      <File FileName="Assets\Scripts\WorthPoints.cs" Line="9" Column="41" />
-      <File FileName="Assets\Scripts\HOMPlayer.cs" Line="63" Column="23" />
-      <File FileName="Assets\Scripts\Camera\ThirdPersonWalker.js" Line="1" Column="1" />
-      <File FileName="Assets\HUD.cs" Line="16" Column="1" />
+      <File FileName="Assets\Scripts\MyGameTime.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LookAtTargetOld.cs" Line="1" Column="1" />
+      <File FileName="Assets\HUD.cs" Line="1" Column="1" />
+      <File FileName="Assets\FootCollider.cs" Line="49" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
