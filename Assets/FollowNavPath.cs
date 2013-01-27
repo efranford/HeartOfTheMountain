@@ -9,9 +9,7 @@ public class FollowNavPath : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		//agent = GetComponent<NavMeshAgent>();
-		//agent.SetDestination(Path.PointsInPath[currentDestination].position);
-			iTween.MoveTo(gameObject, Path.PointsInPath[currentDestination].transform.position, 2);
+		iTween.MoveTo(gameObject, Path.PointsInPath[currentDestination].transform.position, 2);
 	}
 	
 	// Update is called once per frame
@@ -27,11 +25,7 @@ public class FollowNavPath : MonoBehaviour {
 			{
 				currentDestination = 0;
 			}
-			
-			
-			
 			iTween.MoveTo(gameObject,Path.PointsInPath[currentDestination].transform.position, distance*10);
-			//agent.SetDestination(Path.PointsInPath[currentDestination].position);
 		}
 		
 	}

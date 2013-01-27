@@ -48,6 +48,7 @@
      <Compile Include="Assets\EnemyWanderingSquirrel.cs" />
      <Compile Include="Assets\FollowNavPath.cs" />
      <Compile Include="Assets\FootCollider.cs" />
+     <Compile Include="Assets\HOMButton.cs" />
      <Compile Include="Assets\HUD.cs" />
      <Compile Include="Assets\HeartOfTheMountain.cs" />
      <Compile Include="Assets\Heartbeat.cs" />
@@ -160,6 +161,7 @@
      <Compile Include="Assets\Scripts\HOMPlayer.cs" />
      <Compile Include="Assets\Scripts\LookAtTargetOld.cs" />
      <Compile Include="Assets\Scripts\MyGameTime.cs" />
+     <Compile Include="Assets\Scripts\PlayerState.cs" />
      <Compile Include="Assets\Scripts\SmoothMouseLook.cs" />
      <Compile Include="Assets\Scripts\WorthPoints.cs" />
      <Compile Include="Assets\Zombifier.cs" />

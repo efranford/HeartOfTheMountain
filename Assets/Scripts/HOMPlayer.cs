@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System;
 
 public class HOMPlayer : MonoBehaviour {
-	
+		
 	public int AcornsCollected = 0;
 	public Transform SquirrelModel;
 	
@@ -17,6 +17,9 @@ public class HOMPlayer : MonoBehaviour {
 	public AudioClip WalkSound;
 	public AudioClip RunSound;
 	public AudioClip PickedUpAcornSound;
+	
+	public PlayerState State;
+	
 	
 	void Start()
 	{
@@ -34,25 +37,30 @@ public class HOMPlayer : MonoBehaviour {
 			if(moveDirection == Vector3.zero)
 			{
 				animation.CrossFade("Idle");
+				State = PlayerState.Idle;
 			}
 			else if(Input.GetKey(KeyCode.LeftShift))
 			{
 				animation.CrossFade("Run");
+				State = PlayerState.Running;
 				moveDirection *= 2.5f;
 			}
 			else
 			{
 				animation.CrossFade("Walk");
+				State = PlayerState.Walking;
 			}
 			
 			if(Input.GetKey(KeyCode.LeftControl))
 			{
 				animation.CrossFade("Crouch");
+				State = PlayerState.Crouching;
 			}
             if (Input.GetButton("Jump"))
 			{
                 moveDirection.y = jumpSpeed;
 				animation.Blend("Jump");
+				State = PlayerState.Jumping;
 			}
         }
         moveDirection.y -= gravity * Time.deltaTime;
