@@ -44,8 +44,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ChaseTarget.cs" />
+     <Compile Include="Assets\EnemyWanderingSquirrel.cs" />
+     <Compile Include="Assets\FollowNavPath.cs" />
      <Compile Include="Assets\FootCollider.cs" />
      <Compile Include="Assets\HUD.cs" />
+     <Compile Include="Assets\HeartOfTheMountain.cs" />
      <Compile Include="Assets\Heartbeat.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\Other\ChatInput.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\Other\DownloadTexture.cs" />
@@ -149,6 +153,8 @@
      <Compile Include="Assets\NGUI\Scripts\UI\UITiledSprite.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
+     <Compile Include="Assets\NavigationPath.cs" />
+     <Compile Include="Assets\PlayAnimationWhenPlayerIsInRange.cs" />
      <Compile Include="Assets\PlayModePersist\PPAssemblyLocator.cs" />
      <Compile Include="Assets\Scripts\Camera\ThirdPersonLook.cs" />
      <Compile Include="Assets\Scripts\HOMPlayer.cs" />
@@ -156,6 +162,7 @@
      <Compile Include="Assets\Scripts\MyGameTime.cs" />
      <Compile Include="Assets\Scripts\SmoothMouseLook.cs" />
      <Compile Include="Assets\Scripts\WorthPoints.cs" />
+     <Compile Include="Assets\Zombifier.cs" />
      <Compile Include="Assets\iTween\iTween.cs" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
