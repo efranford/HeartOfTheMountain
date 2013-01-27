@@ -16,9 +16,14 @@ public class EnemyWanderingSquirrel : MonoBehaviour {
 	int currentDestination = 0;
 	
 	public float DistanceToChangeTargets = 2.0f;
+
+    public Mesh EnemyMesh;
 	
-	float distanceToPlayer;
+	int distanceToPlayer;
 	HOMPlayer player;
+    float oldSpeed = 0;
+	
+	public bool IsZombie;
 	
 	// Use this for initialization
 	void Start () 
@@ -28,20 +33,29 @@ public class EnemyWanderingSquirrel : MonoBehaviour {
 			shouldChasePlayer = true;
 		else
 			agent.SetDestination(Path.PointsInPath[0].position);
-		
+        oldSpeed = agent.speed;
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<HOMPlayer>();
 	}
 	
 	void Update()
 	{
 		RaycastHit hit;
-		distanceToPlayer = Vector3.Distance(transform.position, player.gameObject.transform.position);//Path.PointsInPath[currentDestination].position);
+		distanceToPlayer = (int)Vector3.Distance(transform.position, player.gameObject.transform.position);//Path.PointsInPath[currentDestination].position);
 		if(distanceToPlayer <= DetectRange())
 		{
-			Debug.Log(distanceToPlayer+":"+ DetectRange());
-			Debug.Log("So.. I can chase the player");
 			gameObject.transform.LookAt(player.transform);
-			agent.SetDestination(player.transform.position);
+			
+			transform.LookAt(player.transform.position);
+            var forward = transform.TransformDirection(Vector3.forward) * 10;
+			Debug.DrawRay(transform.position, Vector3.forward * 10, Color.magenta);
+            RaycastHit playerCollisionHit;
+            if (Physics.Raycast(transform.position, Vector3.forward, out playerCollisionHit) && playerCollisionHit.collider.tag == "Player")
+            {
+                Debug.Log("I CAN SEE THE PLAYER!!!");
+                agent.speed = 15;
+			    agent.SetDestination(player.transform.position);
+            }
+            
 		}
 		else if(Path != null)
 		{
@@ -57,6 +71,7 @@ public class EnemyWanderingSquirrel : MonoBehaviour {
 					currentDestination = 0;
 				}
 			}
+            agent.speed = oldSpeed;
 			agent.SetDestination(Path.PointsInPath[currentDestination].position);
 		}
 		else if(shouldChasePlayer)
@@ -88,7 +103,7 @@ public class EnemyWanderingSquirrel : MonoBehaviour {
 			case PlayerState.Crouching:
 				return 3.0f;
 			default:
-				return 1.0f;
+				return 3.0f;
 		}
 	}
 	

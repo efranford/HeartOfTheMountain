@@ -7,5 +7,7 @@ public enum PlayerState
 	Walking,
 	Running,
 	Jumping,
-	Crouching
+	Crouching,
+    Dead,
+    Won
 }

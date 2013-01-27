@@ -20,6 +20,7 @@ public class HOMPlayer : MonoBehaviour {
 	
 	public PlayerState State;
 	
+
 	
 	void Start()
 	{

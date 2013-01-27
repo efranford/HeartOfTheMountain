@@ -9,35 +9,55 @@ public class Heartbeat : MonoBehaviour {
 	private Timer heartBeatL;
 	private Timer heartBeatR;
 	
-	public double HeartRate = .42;
+	public double HeartRate = 420;
 	
 	GameObject player;
-	
-	void Start()
-	{
-		player = GameObject.FindGameObjectWithTag("Player");
-		heartBeatL = new Timer();
-		heartBeatL.Elapsed += new ElapsedEventHandler(HeartBeatLElapsed);
-		heartBeatL.Interval = HeartRate;
-		heartBeatL.Enabled = true;
-		
-		heartBeatR = new Timer();
-		heartBeatR.Elapsed += new ElapsedEventHandler(HeartBeatRElapsed);
-	}
-	
+    Vector3 location;
+
+    bool shouldPlayFirstBeat;
+    bool shouldPlaySecondBeat;
+
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Heart");
+        /*heartBeatL = new Timer();
+        heartBeatL.Elapsed += new ElapsedEventHandler(HeartBeatLElapsed);
+        heartBeatL.Interval = HeartRate;
+        heartBeatL.Enabled = true;
+
+        heartBeatR = new Timer();
+        heartBeatR.Elapsed += new ElapsedEventHandler(HeartBeatRElapsed);
+        shouldPlayFirstBeat = true;*/
+    }
+
+    void Update()
+    {
+        /*location = player.transform.position;
+        if (shouldPlayFirstBeat && heartBeatL.Enabled)
+        {
+			audio.PlayOneShot(HeartBeats[0]);
+        }
+        else if(shouldPlaySecondBeat && heartBeatR.Enabled)
+        {
+			audio.PlayOneShot(HeartBeats[1]);
+        }*/
+    }
+
 	private void HeartBeatLElapsed(object sender, ElapsedEventArgs e)
 	{
 		Debug.Log("LBEAT");
-		AudioSource.PlayClipAtPoint(HeartBeats[0],player.transform.position);
 		heartBeatL.Interval = HeartRate;
+        shouldPlaySecondBeat = true;
+        shouldPlayFirstBeat = false;
 		heartBeatL.Enabled = false;
 		heartBeatR.Enabled = true;
 	}
 	private void HeartBeatRElapsed(object sender, ElapsedEventArgs e)
 	{
 		Debug.Log("RBEAT");
-		AudioSource.PlayClipAtPoint(HeartBeats[1],player.transform.position);
 		heartBeatR.Interval = HeartRate;
+        shouldPlayFirstBeat = true;
+        shouldPlaySecondBeat = false;
 		heartBeatR.Enabled = false;
 		heartBeatL.Enabled = true;
 	}

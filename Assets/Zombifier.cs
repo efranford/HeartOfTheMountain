@@ -7,6 +7,7 @@ public class Zombifier : MonoBehaviour {
 	GameObject[] enemies;
 	public Material ZombieBody;
 	public Material ZombieEyeLid;
+	public Mesh ZombieMesh;
 	
 	// Use this for initialization
 	void Start () {
@@ -22,6 +23,7 @@ public class Zombifier : MonoBehaviour {
 			{
 				ews.Body.renderer.material = ZombieBody;
 				ews.EyeLidL.renderer.material = ews.EyeLidR.renderer.material = ZombieEyeLid;
+				ews.EnemyMesh =  ZombieMesh;
 			}
 		}
 	}
